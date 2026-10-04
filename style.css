@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  margin: 0;
+
+  padding: 20px;
+
+
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-width: 100%;
+  text-align: center;
+
+}
+
+/* =========================
+Heading
+========================= */
+
+h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 5px 0;
+  padding: 15px;
+  background: #003304;
+  /*background: #98FB98;*/
+
+  border-radius: 10px;
+  box-shadow:
+    0 3px 4px rgba(0, 0, 0, 0.2),
+    0 3px 10px rgba(0, 0, 0, 0.19);
+
+
+
+}
+
+p {
+  margin-top: 25px;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #777;
+
+
+}
+
+/* =========================
+Password Display
+========================= */
+
+.password-display {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  position: relative;
+
+  border-bottom: 3px solid green;
+
+  border-radius: 8px;
+
+  padding: 10px;
+
+  min-height: 50px;
+
+
+}
+
+/*
+Password text container.
+
+JavaScript creates two lines:
+
+Line 1 = maximum 35 characters
+Line 2 = remaining characters
+
+
+*/
+
+.password-text {
+  flex: 1;
+
+  min-width: 0;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  color: #333;
+
+  text-align: left;
+
+  padding-left: 10px;
+
+  /*
+    Allows long passwords to wrap
+    instead of overflowing the container.
+*/
+  overflow-wrap: anywhere;
+
+  word-break: break-all;
+
+
+}
+
+/* Password buttons */
+
+.password-display button {
+  flex-shrink: 0;
+
+  background-color: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  padding: 5px;
+
+
+}
+
+.password-display button:hover {
+  opacity: 0.7;
+}
+
+/* Icons */
+
+.fa-sync-alt {
+  color: #2F4F4F;
+}
+
+.fa-copy {
+  color: #1E90FF;
+}
+
+/* =========================
+Customize Section
+========================= */
+
+.customize {
+  margin-top: 70px;
+}
+
+.customize h2 {
+  font-size: 18px;
+
+  margin-bottom: 35px;
+
+  color: #333;
+
+
+}
+
+/* =========================
+Length Control
+========================= */
+
+.length-control {
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+
+}
+
+.length-control label {
+  margin-right: 15px;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+
+
+}
+
+/* Number input */
+
+.length-control input[type="number"] {
+  width: 55px;
+
+  padding: 5px;
+
+  font-size: 14px;
+
+  margin-right: 10px;
+
+  border-radius: 5px;
+
+  border: 1px solid #ccc;
+
+
+}
+
+/* Range slider */
+
+#length-slider {
+  flex: 1;
+
+  margin-left: 10px;
+
+  accent-color: green;
+
+  cursor: pointer;
+
+
+}
+
+/* =========================
+Checkboxes
+========================= */
+
+.checkboxes {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  font-size: 14px;
+
+  accent-color: #04AA6D;
+
+
+}
+
+.checkboxes label {
+  cursor: pointer;
+}
+
+/* =========================
+Copy Button
+========================= */
+
+.copy-password-btn {
+  margin-top: 50px;
+
+  background: #009926;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  font-size: 16px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+
+
+}
+
+.copy-password-btn:hover {
+  background-color: #009900;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+/* =========================
+Mobile Responsive Design
+========================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .password-text {
+    font-size: 16px;
+  }
+
+  .length-control {
+    flex-wrap: wrap;
+  }
+
+  .length-control label {
+    width: 100%;
+
+    margin-bottom: 10px;
+  }
+
+  #length-slider {
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .checkboxes {
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+  }
+
+  .checkboxes label {
+    width: 48%;
+  }
+
+
+}

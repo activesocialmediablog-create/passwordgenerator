@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Password Generator</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Generate a secure, random password</h1>
+
+    <p>
+      Use our online password generator tool to instantly create
+      a secure, random password.
+    </p>
+
+    <!-- Password Display -->
+    <div class="password-display">
+
+      <div id="password" class="password-text" aria-label="Generated password"></div>
+
+      <button id="regenerate" type="button" onclick="generatePassword()" aria-label="Regenerate password">
+        <i class="fas fa-sync-alt" title="Regenerate Password"></i>
+      </button>
+
+      <button type="button" onclick="copyPassword()" class="copy-btn" aria-label="Copy password">
+        <i class="fas fa-copy" title="Copy Password"></i>
+      </button>
+
+    </div>
+
+    <!-- Customize Password -->
+    <div class="customize">
+
+      <h2>Customize your password</h2>
+
+      <div class="length-control">
+
+        <label for="length">
+          Password Length
+        </label>
+
+        <input type="number" id="length" min="5" max="50" value="15" oninput="updateSlider()">
+
+        <input type="range" id="length-slider" class="slider-cust" min="5" max="50" value="15" oninput="updateNumber()" aria-label="Password length slider">
+
+      </div>
+
+      <!-- Password Options -->
+      <div class="checkboxes">
+
+        <label>
+          <input type="checkbox" id="uppercase" checked>
+          Uppercase
+        </label>
+
+        <label>
+          <input type="checkbox" id="lowercase" checked>
+          Lowercase
+        </label>
+
+        <label>
+          <input type="checkbox" id="numbers" checked>
+          Numbers
+        </label>
+
+        <label>
+          <input type="checkbox" id="symbols" checked>
+          Symbols
+        </label>
+
+      </div>
+
+    </div>
+
+    <!-- Copy Password -->
+    <button type="button" onclick="copyPassword()" class="copy-password-btn">
+      Copy password
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
